@@ -11,8 +11,7 @@ jobs:
   build:
     machine: true
     steps:
-      run:
-        command: |
+      - run: |
           echo Setting up...
           stack setup
           stack build --fast
