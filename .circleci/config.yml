@@ -11,6 +11,7 @@ jobs:
       - run: |
           echo installing stack ...
           curl -sSL https://get.haskellstack.org/ | sh
+      - checkout
       - run: |
           echo Setting up...
           echo `pwd`
