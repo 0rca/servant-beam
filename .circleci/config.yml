@@ -9,4 +9,10 @@ dependencies:
 
 jobs:
   build:
-    - stack build --fast
+    machine: true
+    steps:
+      run:
+        command: |
+          echo Setting up...
+          stack setup
+          stack build --fast
