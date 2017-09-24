@@ -37,6 +37,15 @@ resolver: lts-9.5
 # will not be run. This is useful for tweaking upstream packages.
 packages:
 - '.'
+- location:
+    git: git@github.com:tathougies/beam.git
+    commit: 2296b7b9a127d2d6f72fd92f8f6883cd0cb76e54
+  subdirs:
+  - beam-core
+  - beam-migrate
+  - beam-postgres
+  - beam-sqlite
+  extra-dep: true
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
 extra-deps: []

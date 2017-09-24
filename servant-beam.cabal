@@ -20,6 +20,9 @@ library
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5
                      , protolude
+                     , beam-core
+                     , beam-sqlite
+                     , sqlite-simple
 
   default-language:    Haskell2010
   default-extensions: NoImplicitPrelude OverloadedStrings
@@ -31,6 +34,7 @@ executable servant-beam-exe
   build-depends:       base
                      , servant-beam
                      , protolude
+
   default-language:    Haskell2010
   default-extensions: NoImplicitPrelude OverloadedStrings
 
