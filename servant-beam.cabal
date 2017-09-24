@@ -1,0 +1,51 @@
+name:                servant-beam
+version:             0.1.0.0
+synopsis:            A sample servant and beam integration
+description:         Servant allows building typed APIs using advanced type machinery.
+                     Beam strives to do the same with persistence.
+                     Let's see if they are a good fit for each other.
+homepage:            https://github.com/githubuser/servant-beam#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Alex Vzorov
+maintainer:          alex.vzorov@gmail.com
+copyright:           2017 Alex Vzorov
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+                     , protolude
+
+  default-language:    Haskell2010
+  default-extensions: NoImplicitPrelude OverloadedStrings
+
+executable servant-beam-exe
+  hs-source-dirs:      exe
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , servant-beam
+                     , protolude
+  default-language:    Haskell2010
+  default-extensions: NoImplicitPrelude OverloadedStrings
+
+test-suite servant-beam-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , servant-beam
+                     , protolude
+
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+  default-extensions: NoImplicitPrelude OverloadedStrings
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/servant-beam
