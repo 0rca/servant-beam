@@ -18,6 +18,8 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Lib
+                     , User
+                     , Database
   build-depends:       base >= 4.7 && < 5
                      , protolude
                      , beam-core
@@ -30,7 +32,7 @@ library
 executable servant-beam-exe
   hs-source-dirs:      exe
   main-is:             Main.hs
-  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wno-partial-type-signatures
   build-depends:       base
                      , servant-beam
                      , protolude
