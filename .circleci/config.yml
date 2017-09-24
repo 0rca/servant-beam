@@ -4,14 +4,14 @@ machine:
   ghc:
   version: 8.0.2
 
-dependencies:
-  - pre: haskell-stack
-
 jobs:
   build:
     machine: true
     steps:
       - run: |
+          echo installing stack ...
+          curl -sSL https://get.haskellstack.org/ | sh
           echo Setting up...
           stack setup
+          echo Building ...
           stack build --fast
