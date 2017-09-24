@@ -12,7 +12,9 @@ jobs:
           name: Install stack
           command: curl -sSL https://get.haskellstack.org/ | sh
       - checkout
-      - run: Setup stack
+      - run:
+          name: Setup stack
+          command: stack setup
       - run:
           name: Build project
           command: stack build --fast --install-ghc
