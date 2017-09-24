@@ -9,13 +9,13 @@ jobs:
     machine: true
     steps:
       - run: |
-          echo installing stack ...
-          curl -sSL https://get.haskellstack.org/ | sh
+          name: Install stack
+          command: curl -sSL https://get.haskellstack.org/ | sh
       - checkout
-      - run: ls -la
-      - run: |
-          echo Setting up...
-          stack setup
-      - run: |
-          echo Building ...
-          stack build --fast --install-ghc
+      - run: Setup stack
+      - run:
+          name: Build project
+          command: stack build --fast --install-ghc
+      - run:
+          name: test
+          command: stack test
