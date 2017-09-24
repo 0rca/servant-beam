@@ -16,4 +16,4 @@ jobs:
       #     stack setup
       - run: |
           echo Building ...
-          stack build --fast --no-install-ghc
+          stack build --fast -install-ghc
