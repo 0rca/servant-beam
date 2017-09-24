@@ -7,6 +7,6 @@ machine:
 dependencies:
   - pre: haskell-stack
 
-compile:
-  override:
+jobs:
+  build:
     - stack build --fast
