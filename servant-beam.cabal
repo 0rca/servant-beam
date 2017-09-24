@@ -36,6 +36,9 @@ executable servant-beam-exe
   build-depends:       base
                      , servant-beam
                      , protolude
+                     , beam-core
+                     , beam-sqlite
+                     , sqlite-simple
 
   default-language:    Haskell2010
   default-extensions: NoImplicitPrelude OverloadedStrings

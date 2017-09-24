@@ -1,0 +1,12 @@
+version: 2.0
+
+machine:
+  ghc:
+  version: 8.0.2
+
+dependencies:
+  - pre: haskell-stack
+
+compile:
+  override:
+    - stack build --fast
