@@ -11,9 +11,11 @@ jobs:
       - run: |
           echo installing stack ...
           curl -sSL https://get.haskellstack.org/ | sh
-      # - run: |
-      #     echo Setting up...
-      #     stack setup
+      - run: |
+          echo Setting up...
+          echo `pwd`
+          cat stack.yml
+          stack setup
       - run: |
           echo Building ...
           stack build --fast --install-ghc
