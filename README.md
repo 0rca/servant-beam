@@ -1,4 +1,4 @@
 # servant-beam
 
-- [Beam](https://tathougies.github.io/beam/)
-- [Servant](http://haskell-servant.github.io)
+- [Servant](https://github.com/haskell-servant/servant)
+- [Beam](https://github.com/tathougies/beam)
