@@ -15,8 +15,6 @@ jobs:
       - run: ls -la
       - run: |
           echo Setting up...
-          echo `pwd`
-          cat stack.yml
           stack setup
       - run: |
           echo Building ...
